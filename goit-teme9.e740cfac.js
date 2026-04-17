@@ -207,11 +207,11 @@
       });
     }
   }
-})({"cvTP8":[function(require,module,exports,__globalThis) {
+})({"bFMSB":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
-var HMR_SERVER_PORT = 1234;
+var HMR_SERVER_PORT = 63922;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "439701173a9199ea";
 var HMR_USE_SSE = false;
@@ -714,7 +714,229 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"a8vrg":[function(require,module,exports,__globalThis) {
+// const name = "Liliya";
+// const arr = ["Jura", "Dasha", "oleg"]
+// const objA = {
+//     name: "Jura",
+//     age: 42
+// }
+// localStorage.setItem("qwe", name)
+// const parseName = localStorage.getItem("qwe")
+// localStorage.removeItem("qwe")
+// console.log(parseName);
+// localStorage.setItem("name", "Jura")
+// localStorage.setItem("age", 42)
+// localStorage.removeItem("name")
+// localStorage.removeItem("age")
+// localStorage.clear()
+// =================================================
+// const checkbox = document.querySelector(".checkbox");
+// const check = document.querySelector(".check");
+// const body = document.querySelector("body");
+// const STORAGE_KEY = "theme"
+// if (localStorage.getItem(STORAGE_KEY) === "on") {
+//     checkbox.classList.add("active")
+//     body.classList.add("active")
+// }
+// checkbox.addEventListener("click", () => {
+//     checkbox.classList.toggle("active")
+//     body.classList.toggle("active")
+//     if (body.classList.contains("active")) {
+//         localStorage.setItem(STORAGE_KEY, "on")
+//     }
+//     else {
+//         localStorage.setItem(STORAGE_KEY, "off")
+//     }
+// });
+// =================================================
+const movies = [
+    {
+        id: 1,
+        title: "Inception",
+        year: 2010,
+        genre: [
+            "Sci-Fi",
+            "Action",
+            "Thriller"
+        ],
+        rating: 8.8,
+        duration: 148,
+        director: "Christopher Nolan",
+        cast: [
+            "Leonardo DiCaprio",
+            "Joseph Gordon-Levitt"
+        ],
+        isOscarWinner: true
+    },
+    {
+        id: 2,
+        title: "The Dark Knight",
+        year: 2008,
+        genre: [
+            "Action",
+            "Crime",
+            "Drama"
+        ],
+        rating: 9.0,
+        duration: 152,
+        director: "Christopher Nolan",
+        cast: [
+            "Christian Bale",
+            "Heath Ledger"
+        ],
+        isOscarWinner: true
+    },
+    {
+        id: 3,
+        title: "Interstellar",
+        year: 2014,
+        genre: [
+            "Sci-Fi",
+            "Drama"
+        ],
+        rating: 8.6,
+        duration: 169,
+        director: "Christopher Nolan",
+        cast: [
+            "Matthew McConaughey",
+            "Anne Hathaway"
+        ],
+        isOscarWinner: true
+    },
+    {
+        id: 4,
+        title: "Titanic",
+        year: 1997,
+        genre: [
+            "Romance",
+            "Drama"
+        ],
+        rating: 7.9,
+        duration: 195,
+        director: "James Cameron",
+        cast: [
+            "Leonardo DiCaprio",
+            "Kate Winslet"
+        ],
+        isOscarWinner: true
+    },
+    {
+        id: 5,
+        title: "Avatar",
+        year: 2009,
+        genre: [
+            "Sci-Fi",
+            "Adventure"
+        ],
+        rating: 7.8,
+        duration: 162,
+        director: "James Cameron",
+        cast: [
+            "Sam Worthington",
+            "Zoe Saldana"
+        ],
+        isOscarWinner: true
+    },
+    {
+        id: 6,
+        title: "The Matrix",
+        year: 1999,
+        genre: [
+            "Sci-Fi",
+            "Action"
+        ],
+        rating: 8.7,
+        duration: 136,
+        director: "The Wachowskis",
+        cast: [
+            "Keanu Reeves",
+            "Laurence Fishburne"
+        ],
+        isOscarWinner: true
+    },
+    {
+        id: 7,
+        title: "Forrest Gump",
+        year: 1994,
+        genre: [
+            "Drama",
+            "Romance"
+        ],
+        rating: 8.8,
+        duration: 142,
+        director: "Robert Zemeckis",
+        cast: [
+            "Tom Hanks",
+            "Robin Wright"
+        ],
+        isOscarWinner: true
+    },
+    {
+        id: 8,
+        title: "The Shawshank Redemption",
+        year: 1994,
+        genre: [
+            "Drama"
+        ],
+        rating: 9.3,
+        duration: 142,
+        director: "Frank Darabont",
+        cast: [
+            "Tim Robbins",
+            "Morgan Freeman"
+        ],
+        isOscarWinner: false
+    },
+    {
+        id: 9,
+        title: "Gladiator",
+        year: 2000,
+        genre: [
+            "Action",
+            "Drama"
+        ],
+        rating: 8.5,
+        duration: 155,
+        director: "Ridley Scott",
+        cast: [
+            "Russell Crowe",
+            "Joaquin Phoenix"
+        ],
+        isOscarWinner: true
+    }
+];
+const STORAGE_KEY = "dataMovie";
+const listEl = document.querySelector(".list");
+let currentMuvies = movies;
+const parseMovies = localStorage.getItem("STORAGE_KEY");
+if (parseMovies) {
+    currentMuvies = JSON.parse(parseMovies);
+    createItems(currentMuvies);
+}
+function createItems(array) {
+    const item = array.map(({ id, title, year, rating, director, isOscarWinner })=>{
+        return `
+        <li class="item" id="${id}">
+            <h2>\u{41D}\u{430}\u{437}\u{432}\u{430}: ${title}</h2>
+            <p>\u{420}\u{456}\u{43A}: ${year}</p>
+            <p>\u{420}\u{435}\u{439}\u{442}\u{438}\u{43D}\u{433}: ${rating}</p>
+            <h3>\u{420}\u{435}\u{436}\u{438}\u{441}\u{435}\u{440}: ${director}</h3>
+            <p>\u{41E}\u{441}\u{43A}\u{430}\u{440}: ${isOscarWinner ? "\u041E\u0442\u0440\u0438\u043C\u0430\u0432" : "\u041D\u0435 \u043E\u0442\u0440\u0438\u043C\u0430\u0432"}</p>
+            <button class="delit" type=""button>Delit</button>
+        </li>`;
+    }).join("");
+    listEl.innerHTML = item;
+}
+createItems(currentMuvies);
+listEl.addEventListener("click", (evt)=>{
+    if (evt.target.nodeName !== "BUTTON") return;
+    const id = Number(evt.target.closest("li").id);
+    const idx = currentMuvies.findIndex((muvie)=>movie.id === id);
+    currentMuvies.splice(idx, 1);
+    localStorage.setItem("STORAGE_KEY", JSON.stringify(currentMuvies));
+    createItems(currentMuvies);
+});
 
-},{}]},["cvTP8","a8vrg"], "a8vrg", "parcelRequire94bc", {})
+},{}]},["bFMSB","a8vrg"], "a8vrg", "parcelRequire94bc", {})
 
 //# sourceMappingURL=goit-teme9.e740cfac.js.map
