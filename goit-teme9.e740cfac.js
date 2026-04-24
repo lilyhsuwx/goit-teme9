@@ -207,11 +207,11 @@
       });
     }
   }
-})({"bFMSB":[function(require,module,exports,__globalThis) {
+})({"cvTP8":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
-var HMR_SERVER_PORT = 63922;
+var HMR_SERVER_PORT = 1234;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "439701173a9199ea";
 var HMR_USE_SSE = false;
@@ -931,12 +931,12 @@ createItems(currentMuvies);
 listEl.addEventListener("click", (evt)=>{
     if (evt.target.nodeName !== "BUTTON") return;
     const id = Number(evt.target.closest("li").id);
-    const idx = currentMuvies.findIndex((muvie)=>movie.id === id);
+    const idx = currentMuvies.findIndex((muvie)=>muvie.id === id);
     currentMuvies.splice(idx, 1);
     localStorage.setItem("STORAGE_KEY", JSON.stringify(currentMuvies));
     createItems(currentMuvies);
 });
 
-},{}]},["bFMSB","a8vrg"], "a8vrg", "parcelRequire94bc", {})
+},{}]},["cvTP8","a8vrg"], "a8vrg", "parcelRequire94bc", {})
 
 //# sourceMappingURL=goit-teme9.e740cfac.js.map
