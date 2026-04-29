@@ -5,19 +5,23 @@ body {
 }
 
 #form {
-  border: 3px solid #000;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  width: 300px;
-  height: 400px;
+  width: 400px;
+  height: 500px;
   display: flex;
+  box-shadow: 10px 5px 30px #00000062;
+}
+
+#list {
+  margin-left: 20px;
 }
 
 .title {
   text-align: center;
-  font-size: 22зч;
+  font-size: 22px;
 }
 
 input {
@@ -27,12 +31,24 @@ input {
   padding: 10px 20px;
 }
 
-.btn-save {
+button {
   color: wheat;
+  cursor: pointer;
   background-color: #0000ffca;
   border: none;
   border-radius: 10px;
-  margin-top: 10px;
   padding: 10px 20px;
+}
+
+.btn-save:hover {
+  background-color: green;
+}
+
+.btn-delete:hover {
+  background-color: #ff0000c8;
+}
+
+.btn-chenge:hover {
+  background-color: #4545e7;
 }
 /*# sourceMappingURL=goit-teme9.2cdaf7bc.css.map */
