@@ -5,7 +5,34 @@ body {
 }
 
 #form {
+  border: 3px solid #000;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   width: 300px;
-  height: 500px;
+  height: 400px;
+  display: flex;
+}
+
+.title {
+  text-align: center;
+  font-size: 22зч;
+}
+
+input {
+  background-color: #0000002c;
+  border: none;
+  border-radius: 100px;
+  padding: 10px 20px;
+}
+
+.btn-save {
+  color: wheat;
+  background-color: #0000ffca;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 10px 20px;
 }
 /*# sourceMappingURL=goit-teme9.2cdaf7bc.css.map */

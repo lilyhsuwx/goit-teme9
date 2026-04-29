@@ -885,6 +885,11 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 // })
 // =================================================
 // Створіть програму для зберігання контактів — ім'я, прізвище, телефон та електронна адреса. Зберігайте контакти в localStorage та дозволяйте користувачу додавати, видаляти та редагувати контакти.
+const name = document.getElementById("name");
+const lastName = document.getElementById("lastName");
+const number = document.getElementById("number");
+const gmail = document.getElementById("gmail");
+const btnSave = document.getElementById("btn-save");
 
 },{}]},["cvTP8","a8vrg"], "a8vrg", "parcelRequire94bc", {})
 
